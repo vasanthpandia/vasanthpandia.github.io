@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+  <form class="form">
+    <div id="formDiv">
+      <p>Experiment Values:</p>
+      <p>Target Size (W)</p>
+      <input id="size1" type="number" min="10" max="60" value="45" step="1">
+      <input id="size2" type="number" min="10" max="60" value="10" step="1">
+      <p>Target Distance (D)</p>
+      <input id="distance1" type="number" min="180" max="480" value="180" step="1">
+      <input id="distance2" type="number" min="180" max="480" value="300" step="1">
+      <input id="distance3" type="number" min="180" max="480" value="480" step="1">
+      <p>Number of clicks for each target size and target distance combination (enter an even number)</p>
+      <input id="clickNumber" type="number" min="4" max="16" value="10" step="2">
+      <input id="submitButton" type="submit" value="Start">
+      <p>Please click on the blue circles in the experiment :&#41;</p>
+    </div>
+  </form>
+  <script src="script.js" type="text/javascript"></script>
+</body>

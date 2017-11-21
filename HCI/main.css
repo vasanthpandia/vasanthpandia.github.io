@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+}
+
+#formDiv {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.target.present {
+    fill: #d47828;
+    opacity: 1;
+    z-index: 1;
+}
+
+.target {
+    fill: #4d4d4d;
+    opacity: 0.4;
+    stroke: #eee;
+    z-index: -1;
+}
+
+.mouseline {
+    stroke: #000;
+}
