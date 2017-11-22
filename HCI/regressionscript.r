@@ -1,7 +1,0 @@
-r_data <- read.csv('user_data_dump/result.csv')
-r_data$ID <- log2((r_data$target_distance/r_data$target_width)+1)
-r_data$throughput <- (r_data$ID/r_data$MT)
-rg1 <- lm(formula = MT ~ ID, r_data)
-rg2 <- lm(formula = throughput ~ ID, r_data)
-summary(rg1)
-summary(rg2)

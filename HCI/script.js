@@ -80,7 +80,7 @@ function updateUI(size, distance) {
       var yc = Number($("#" + this.id)[0].cy.baseVal.value);
       if (clickNum > 0) {
         if (clickNum != Number($("#clickNumber")[0].value)) {
-          userData.push({ "target_width": size, "target_distance": distance, "actual_distance": (Math.sqrt(Math.pow((event.clientX - previousPoint.x), 2) + Math.pow((event.clientY - previousPoint.y), 2))), "MT": (timestamp - previousTime) });
+          userData.push({ "target_width": size, "target_distance": distance, "MT": (timestamp - previousTime) });
         }
         previousTime = timestamp; //Make current timestamp as previous timestamp, after click event
         previousPoint = { "x": event.clientX, "y": event.clientY };
@@ -90,7 +90,7 @@ function updateUI(size, distance) {
         $("#" + this.id).removeClass("present");
       }
       else if (clickNum == 0) {
-        userData.push({ "target_width": size, "target_distance": distance, "actual_distance": (Math.sqrt(Math.pow((event.clientX - previousPoint.x), 2) + Math.pow((event.clientY - previousPoint.y), 2))), "MT": (timestamp - previousTime) });
+        userData.push({ "target_width": size, "target_distance": distance, "MT": (timestamp - previousTime) });
 
         if (rows.length != 0) {
           clickNum = Number($("#clickNumber")["0"].value);
@@ -102,7 +102,6 @@ function updateUI(size, distance) {
           $("#" + this.id).removeClass("present");
           document.getElementById("formDiv").style.display = "block";
           console.log(JSON.stringify(userData));
-          //console.log("done!");
         }
       }
 
